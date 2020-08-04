@@ -5,4 +5,21 @@
         <plugin name="Packt_HelloWorld::productName" type="Packt\HelloWorld\Plugin\Catalog\ProductAround"
                 sortOrder="1"/>
     </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="packt_helloworld_subscription_listing_data_source" xsi:type="string">
+                    Packt\HelloWorld\Model\ResourceModel\Subscription\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Packt\HelloWorld\Model\ResourceModel\Subscription\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">Packt_HelloWorld_Subscription</argument>
+            <argument name="resourceModel" xsi:type="string">Packt\HelloWorld\Model\ResourceModel\Subscription
+            </argument>
+        </arguments>
+    </virtualType>
 </config>

@@ -28,8 +28,6 @@ class Collection extends \Magento\Framework\App\Action\Action
         $productCollection->addAttributeToSelect('*');
         $subscription = $this->subscription->create();
         foreach ($productCollection as $product) {
-            $subscription->setAttributeSetId($product->getAttributeSetId());
-            $subscription->setTypeId($product->getTypeId());
             $subscription->setSku($product->getSku());
             $subscription->setName($product->getName());
             $subscription->setPrice($product->getPrice());

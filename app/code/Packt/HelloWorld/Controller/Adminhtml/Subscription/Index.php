@@ -20,9 +20,7 @@ class Index extends \Magento\Backend\App\Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Packt_HelloWorld::subscription');
-        $resultPage->addBreadcrumb(__('HelloWorld'), __('HelloWorld'));
-        $resultPage->addBreadcrumb(__('ManageSubscriptions'), __('Manage Subscriptions'));
-        $resultPage->getConfig()->getTitle()->prepend(__('HelloWorld Subscriptions'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Product Details'));
         return $resultPage;
     }
     protected function _isAllowed()

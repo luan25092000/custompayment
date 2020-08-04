@@ -18,7 +18,7 @@ class UpgradeData implements UpgradeDataInterface
 
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-        if (version_compare($context->getVersion(), '2.0.5') < 0) {
+        if (version_compare($context->getVersion(), '2.0.9') < 0) {
             $categorySetup = $this->categorySetupFactory->create(['setup' => $setup]);
         }
         $entityTypeId = $categorySetup->getEntityTypeId(\Magento\Catalog\Model\Product::ENTITY);

@@ -21,7 +21,7 @@
         />
         <add
             id="Packt_HelloWorld::subscription"
-            title="Subscriptions"
+            title="Product Details"
             module="Packt_HelloWorld"
             sortOrder="70"
             parent="Packt_HelloWorld::helloworld"

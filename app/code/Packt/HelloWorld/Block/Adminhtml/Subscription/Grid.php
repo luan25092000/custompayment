@@ -34,31 +34,10 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
         $this->addColumn(
-            'attribute_set_id',
-            [
-                'header' => __('Attribute set id'),
-                'index' => 'attribute_set_id'
-            ]
-        );
-        $this->addColumn(
-            'type_id',
-            [
-                'header' => __('Type id'),
-                'index' => 'type_id'
-            ]
-        );
-        $this->addColumn(
             'sku',
             [
                 'header' => __('Sku'),
                 'index' => 'sku'
-            ]
-        );
-        $this->addColumn(
-            'required_option',
-            [
-                'header' => __('Required option'),
-                'index' => 'required_option'
             ]
         );
         $this->addColumn(
@@ -69,17 +48,10 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
         $this->addColumn(
-            'updated_at',
-            [
-                'header' => __('Updated at'),
-                'index' => 'updated at'
-            ]
-        );
-        $this->addColumn(
-            'Name',
+            'name',
             [
                 'header' => __('Name'),
-                'index' => 'Name'
+                'index' => 'name'
             ]
         );
         $this->addColumn(
@@ -88,20 +60,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 'header' => __('Price'),
                 'index' => 'price',
                 ''
-            ]
-        );
-        $this->addColumn(
-            'is_salable',
-            [
-                'header' => __('Is salable'),
-                'index' => 'is-salable'
-            ]
-        );
-        $this->addColumn(
-            'store_id',
-            [
-                'header' => __('Store id'),
-                'index' => 'store_id'
             ]
         );
         return $this;
