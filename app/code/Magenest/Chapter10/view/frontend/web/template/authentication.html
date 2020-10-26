@@ -1,0 +1,44 @@
+<!-- ko ifnot:  isLoggedIn() -->
+<!--The 'step_code' value from the .js file should be used-->
+<li id="step_code" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Thông tin đăng nhập'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+        <div style="display: none; color:red;" id="error">Thông tin đăng nhập chưa chính xác</div>
+        <form autocomplete="off" method="POST" class="form" data-bind="submit: checkAccount">
+            <label>Email/ Số điện thoại</label>
+            <input type="text" placeholder="Enter your email or phonenumber" name="email" id="email" required/>
+            <br><br>
+            <div class="block-password">
+                <label>Mật khẩu</label>
+                <a href="#">Quên mật khẩu</a>
+            </div>
+            <input type="password" placeholder="Enter your password" name="password" id="password" style="padding:1.7rem;" required/>
+            <div class="block-bottom">
+                <input type="submit" value="Đăng nhập" name="submit" id="submit" class="submit-button"/>
+                <a href="#" class="sign-up-authentication">Đăng ký</a>
+                <a href="#" class="payment-authentication">Thanh toán không cần đăng nhập</a>
+                <div>hoặc đăng nhập bằng</div>
+            </div>
+            <div class="footer-authentication">
+                <div class="facebook-sign-up">
+                    <div class="facebook-icon">
+                        <i class="fab fa-facebook-square"></i>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+                <div class="google-sign-up">
+                    <div class="google-icon">
+                        <i class="fab fa-google"></i>
+                        <a href="#">Google</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
+<!--/ko-->
+<!-- ko if:  isLoggedIn() -->
+<div>You have already logged</div>
+<!--/ko-->

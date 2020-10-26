@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var Magenest\Chapter10\Block\Total $block
+ */
+?>
+<div id="footer" data-bind="scope:'switch-checkout'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#footer": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "switch-checkout": {
+                        "component": "Magenest_Chapter10/js/view/switch",
+                        "total": <?= $block->getTotal(); ?>
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>

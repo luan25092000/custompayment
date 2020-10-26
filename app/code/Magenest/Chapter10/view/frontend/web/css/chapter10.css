@@ -1,0 +1,93 @@
+.form {
+    margin-top: 1.5rem;
+    width: 62%;
+}
+
+input:nth-child(2) {
+    margin-top: 0.5rem;
+    padding: 1.7rem;
+}
+
+.block-password {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.block-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 2.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+}
+
+.sign-up-authentication {
+    margin: 1rem 0;
+}
+
+.payment-authentication {
+    margin-bottom: 1rem;
+}
+
+.footer-authentication {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.facebook-sign-up, .google-sign-up {
+    width: 41%;
+    border-radius: 2.5rem;
+}
+
+.facebook-sign-up {
+    background-color: #4567AE;
+}
+
+.google-sign-up {
+    background-color: #D95148;
+}
+.facebook-icon > a,.google-icon > a{
+    color:white;
+    font-weight: bold;
+}
+.facebook-icon,.google-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+.fa-facebook-square,.fa-google{
+    color: white;
+    font-size: 2.5rem;
+    margin-right: 2.5rem;
+}
+.comeback,.continue{
+    margin-top:5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-button:hover{
+    background-color: orangered;
+}
+.submenu-authentication{
+    display: flex;
+    justify-content: space-between;
+}
+.total-authentication > span,.total-authentication{
+    font-size:2rem;
+}

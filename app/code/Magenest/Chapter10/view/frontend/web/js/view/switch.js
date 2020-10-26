@@ -1,38 +1,22 @@
 define(
     [
         'ko',
-        'uiComponent',
+        'Magento_Tax/js/view/checkout/summary/shipping',
         'underscore',
-        'Magento_Checkout/js/model/step-navigator'
+        'Magento_Checkout/js/model/step-navigator',
+        'mage/url'
     ],
     function (
         ko,
         Component,
         _,
-        stepNavigator
+        stepNavigator,
+        url,
     ) {
         'use strict';
         return Component.extend({
             defaults: {
                 template: 'Magenest_Chapter10/switch'
-            },
-            //add here your logic to display step,
-            isVisible: ko.observable(true),
-            /**
-             *
-             * @returns {*}
-             */
-            initialize: function () {
-                this._super();
-                stepNavigator.registerStep(
-                    'authentication_code',
-                    null,
-                    'Authentication',
-                    this.isVisible,
-                    _.bind(this.navigate, this),
-                    9
-                );
-                return this;
             },
             /**
              * @returns void
@@ -40,6 +24,7 @@ define(
             navigateToNextStep: function () {
                 stepNavigator.next();
             },
+            //Comeback page
             navigateToPreviousStep: function () {
                 let cart = url.build('checkout/cart/');
                 let authentication = url.build('checkout/#authentication_code');
@@ -53,7 +38,22 @@ define(
                 } else if (currentUrl === payment) {
                     location.replace(shipping);
                 }
+            },
+            showTotal: function () {
+                let authentication = url.build('checkout/#authentication_code');
+                let shipping = url.build('checkout/#shipping');
+                let payment = url.build('checkout/#payment');
+                let currentUrl = window.location.href;
+                if (currentUrl === authentication || currentUrl === shipping) {
+                    return Math.round(this.total);
+                }
+            },
+            showButton: function(){
+                let payment = url.build('checkout/#payment');
+                let currentUrl = window.location.href;
+                return currentUrl === payment;
             }
         });
     }
 );
+
